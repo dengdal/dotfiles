@@ -47,3 +47,10 @@ set tags+=/usr/include/tags
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+
+" Color schemes, e.g. slate, dessert, or evening
+"set t_Co=256
+set background=dark
+colorscheme slate
+"hi normal   ctermfg=black  ctermbg=white
+highlight Normal ctermfg=grey ctermbg=black
