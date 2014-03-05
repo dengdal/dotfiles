@@ -1,0 +1,85 @@
+# Place this file in ~/
+# Run the following command to add these ignores for all your repos:
+# git config --global core.excludesfile ~/.gitignore_global
+
+# Emacs backup files #
+######################
+*~
+[#]*[#]
+
+# VIM swap files #
+##################
+*.swp
+
+# Flake and other generated files #
+###################################
+bin/
+inc/
+lib/
+gen/
+*.linux
+*.cfg
+*.adl
+*.log
+*.lat
+*.csv
+*.bin
+*.sz
+# flex-tools generated files #
+#########################
+*.b3
+*.fader2_1
+*.map
+*.lcf
+# Matlab generated files #
+#########################
+*.mexglx
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.elf
+*.s
+*.i
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+tags
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# tmp-files #
+#############
+*.old
+*.moved
+*.tmp
+
+# eclipse meta data #
+#####################
+.metadata/
