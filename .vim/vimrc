@@ -14,7 +14,10 @@
 "  for MS-DOS and Win32:  $VIM\_vimrc
 "
 "  If you don't understand a setting in here, just type ':h setting'.
-"
+
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
+call pathogen#helptags()
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
@@ -38,6 +41,7 @@ inoremap jk <esc>
 " tags and autochdir for effichient tags usage
 set tags=./tags,tags;
 set autochdir
+set tags+=/usr/include/tags
 
 " For indentation without tabs:
 set expandtab
