@@ -3,7 +3,7 @@ dotfiles
 
 For all my dotfiles
 
-Clone into: .dotfiles
+Clone into: ~/.dotfiles
 
 To install, just run:
 install.sh
