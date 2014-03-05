@@ -15,12 +15,16 @@
 "
 "  If you don't understand a setting in here, just type ':h setting'.
 
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
-call pathogen#helptags()
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
+
+" setup Pathogen to manage plugins
+filetype off                  " force reloading after pathogen loaded
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
+call pathogen#incubate()
+call pathogen#helptags()
 
 " Make backspace behave in a sane manner.
 set backspace=indent,eol,start
@@ -30,6 +34,7 @@ syntax on
 
 " Enable file type detection and do language-dependent indenting.
 filetype plugin indent on
+
 " To copy to and from clipboard: (seems to work anyway)
 "set clipboard+=unnamed  " use the clipboards of vim and win
 "set clipboard+=unnamedplus " use the clipboards of vim and X
@@ -45,8 +50,8 @@ set tags+=/usr/include/tags
 
 " For indentation without tabs:
 set expandtab
-set shiftwidth=2
-set softtabstop=2
+set shiftwidth=4
+set softtabstop=4
 
 " Color schemes, e.g. slate, dessert, or evening
 "set t_Co=256
