@@ -59,3 +59,12 @@ set background=dark
 colorscheme slate
 "hi normal   ctermfg=black  ctermbg=white
 highlight Normal ctermfg=grey ctermbg=black
+
+" Nerdtree toggle
+nmap <silent> <C-N> :NERDTreeToggle<CR>
+
+" clang_complete
+"set g:clang_library_path=/Developer/usr/clang-ide/lib/
+" Avoid freezing on offending code
+"let g:clang_user_options='|| exit 0'
+"let g:clang_close_preview=1
