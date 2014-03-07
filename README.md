@@ -3,7 +3,8 @@ dotfiles
 
 For all my dotfiles
 
-Clone into: .dotfiles
+Clone including submodules: 
+git clone --recursive https://github.com/dengdal/dotfiles.git ~/.dotfiles
 
 To install, just run:
 install.sh
