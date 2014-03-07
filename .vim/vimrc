@@ -42,6 +42,7 @@ inoremap jk <esc>
 set tags=./tags,tags;
 set autochdir
 set tags+=/usr/include/tags
+set tags+=/opt/tags
 
 " For indentation without tabs:
 set expandtab
