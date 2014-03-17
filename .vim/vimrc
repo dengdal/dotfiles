@@ -19,6 +19,9 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
+" test other leader
+"let mapleader = ","
+
 " setup Pathogen to manage plugins
 filetype off                  " force reloading after pathogen loaded
 call pathogen#infect()
@@ -67,7 +70,7 @@ nmap <silent> <C-N> :NERDTreeToggle<CR>
 
 " clang_complete
 " path for osx:
-let g:clang_library_path = '/Developer/usr/clang-ide/lib'
+"let g:clang_library_path = '/Developer/usr/clang-ide/lib'
 " for Ubuntu:
 let g:clang_library_path = '/usr/lib'
 let g:clang_use_library = 1
