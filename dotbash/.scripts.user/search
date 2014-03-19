@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+# Script searches for the textstring in $1 
+# /David Engdal
+#
+find . -type f -exec grep -i "$1" {} \; -print

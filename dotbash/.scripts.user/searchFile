@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+# Script searches for the textstring in $1 
+# and prints just the filename containing it
+# /David Engdal
+#
+
+find . -type f -exec grep -li "$1" {} \; -print

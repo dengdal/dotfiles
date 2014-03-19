@@ -19,8 +19,6 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-" test other leader
-"let mapleader = ","
 
 " setup Pathogen to manage plugins
 filetype off                  " force reloading after pathogen loaded
@@ -37,21 +35,14 @@ syntax on
 " Enable file type detection and do language-dependent indenting.
 filetype plugin indent on
 
-" To copy to and from clipboard: (seems to work anyway)
-"set clipboard+=unnamed  " use the clipboards of vim and win
-"set clipboard+=unnamedplus " use the clipboards of vim and X
-"set go+=a               " Visual selection automatically copied to the clipboard
-"set guioptions+=a
 " ESC is too far away - and Steve Losh and Thanassis Tsiodras is right, this is better than jj
 inoremap jk <esc>
 
 " tags and autochdir for effichient tags usage
-set autochdir
-"set tags=./tags;/,tags;/
-set tags=./tags,tags,/opt/tags,/tags;
-"set tags=./tags;/
+" set autochdir
+set tags=./tags;/
 "set tags+=/usr/include/tags
-set tags+=/opt/tags
+"set tags+=/opt/tags
 
 " For indentation without tabs:
 set expandtab

@@ -1,0 +1,20 @@
+# Some personal bashrc things
+
+# set http-proxy for ericsson:
+export http_proxy=http://www-proxy.ericsson.se:8080
+export https_proxy=https://www-proxy.ericsson.se:8080
+
+# Epiphany related stuff:
+export EPIPHANY_HOME=/opt/adapteva/esdk
+. $EPIPHANY_HOME/setup.sh
+export EPIPHANY_PLATFORM=parallella-16
+
+# setting up cscope
+CSCOPE_DB=/home/emwdea/cscope/cscope.out; export CSCOPE_DB
+# in order to regenerate, run something like this (from / !):
+# cd /
+# find /opt/adapteva/ -name '*.c' -o -name '*.h' > home/emwdea/cscope/cscope.files
+# find /home/emwdea/git/ -name '*.c' -o -name '*.h' >> home/emwdea/cscope/cscope.files
+# cd ~/cscope/
+# cscope -b -q
+
