@@ -2,7 +2,7 @@
 alias m=more
 alias ..='cd ..'
 alias ...='cd ../..'
-alias l=ll
+alias l='ls -al'
 alias la='ls -al'
 alias pu='pushd .'
 alias po='popd'
