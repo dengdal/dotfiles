@@ -39,7 +39,7 @@ filetype plugin indent on
 inoremap jk <esc>
 
 " tags and autochdir for effichient tags usage
-" set autochdir
+set autochdir
 set tags=./tags;/
 "set tags+=/usr/include/tags
 "set tags+=/opt/tags
@@ -72,3 +72,23 @@ let g:clang_close_preview=1
 " statusline
 set laststatus=2
 set statusline=%<%F\ %h%m%r%y%=%-14.(%l,%c%V%)\ %P
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+" syntastic
+let g:syntastic_c_check_header = 1
+let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': ['c', 'h', 'py'], 'passive_filetypes': [] }
+let g:syntastic_c_checkers = ['gcc', 'splint']
+let g:syntastic_python_checkers = ['pylint']
+" put a file named '.syntastic_c_config' in top of your project dir
+" and put one line per inc dir in it like:
+" -Iincludedir
+" Comment: It seems every checker needs its own global config, at least
+" splint does.
+let g:syntastic_c_config_file = '.syntastic_c_config'
+let g:syntastic_splint_config_file = '.syntastic_c_config'
+let g:syntastic_aggregate_errors = 1
+"let g:syntastic_loc_list_height = 5
+"let g:syntastic_enable_signs = 1
+"let g:syntastic_enable_balloons = 1
