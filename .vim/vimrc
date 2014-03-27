@@ -111,3 +111,6 @@ let g:syntastic_aggregate_errors = 1
 inoremap <F3> <C-R>=strftime('%c')<CR><Esc>
 " insert dir:
 inoremap <F2> <C-R>=expand('%:p:h')<CR>
+
+" neocomplete
+let g:neocomplete#enable_at_startup = 1
