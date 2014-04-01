@@ -28,3 +28,5 @@ CSCOPE_DB=/home/emwdea/cscope/cscope.out; export CSCOPE_DB
 # cd ~/cscope/
 # cscope -b -q
 
+# in order to get phoronix-test-suite working
+export NO_OPENSSL=1
