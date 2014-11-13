@@ -22,6 +22,8 @@ set nocompatible
 
 " setup Pathogen to manage plugins
 filetype off                  " force reloading after pathogen loaded
+" To disable a plugin, add it's bundle name to the following list
+let g:pathogen_disabled = ['clang_complete']
 call pathogen#infect()
 call pathogen#incubate()
 call pathogen#helptags()
@@ -44,6 +46,7 @@ inoremap jk <esc>
 " tags and autochdir for effichient tags usage
 set autochdir
 set tags=./tags;/
+set tags+=/usr/src/linux-source-3.2.0/linux-source-3.2.0/
 "set tags+=/usr/include/tags
 "set tags+=/opt/tags
 
@@ -66,18 +69,11 @@ nmap <silent> <C-N> :NERDTreeToggle<CR>
 " path for osx:
 "let g:clang_library_path = '/Developer/usr/clang-ide/lib'
 " for Ubuntu:
-let g:clang_library_path = '/usr/lib'
-let g:clang_use_library = 1
+"let g:clang_library_path = '/usr/lib'
+"let g:clang_use_library = 1
 " Avoid freezing on offending code
-let g:clang_user_options='|| exit 0'
-let g:clang_close_preview=1
-
-" statusline
-" set laststatus=2
-" set statusline=%<%F\ %h%m%r%y%=%-14.(%l,%c%V%)\ %P
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
+"let g:clang_user_options='|| exit 0'
+"let g:clang_close_preview=1
 
 " airline
 let g:airline_theme             = 'powerlineish'
@@ -105,6 +101,7 @@ let g:syntastic_aggregate_errors = 1
 "let g:syntastic_loc_list_height = 5
 "let g:syntastic_enable_signs = 1
 "let g:syntastic_enable_balloons = 1
+let g:syntastic_always_populate_loc_list = 1
 
 " my other keyboard mappings
 " insert date and time:

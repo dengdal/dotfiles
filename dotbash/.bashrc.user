@@ -7,6 +7,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     # Do something under Linux platform
     export http_proxy=http://www-proxy.ericsson.se:8080
     export https_proxy=https://www-proxy.ericsson.se:8080
+    export ftp_proxy=http://www-proxy.ericsson.se:8080
 elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
     # Do something under Windows NT platform
     :
@@ -30,3 +31,14 @@ CSCOPE_DB=/home/emwdea/cscope/cscope.out; export CSCOPE_DB
 
 # in order to get phoronix-test-suite working
 export NO_OPENSSL=1
+
+# armcc:
+. ~/.dotfiles/dotbash/.scripts.user/armenviron.sh
+#export PATH=/home/emwdea/ARM_Compiler_5/bin:$PATH
+
+# ARM flexlm:
+if [ -f /home/emwdea/ARM_Compiler_5/license.dat ]; then
+    export LM_LICENSE_FILE=/home/emwdea/ARM_Compiler_5/license.dat
+    #export LM_LICENSE_FILE=5223@armlic01.ld.sw.ericsson.se,5223@armlic02.ld.sw.ericsson.se,5223@armlic03.ld.sw.ericsson.se
+    #export LM_LICENSE_FILE=5223@armlioc01.ld.sw.ericsson.se
+fi
