@@ -31,5 +31,10 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
     # Do something under Windows NT platform
     echo 'Installing for MINGW32_NT'
+    # this file should work under gitbash or cygwin, but I have not tried that yet.
+    # you can use win commands like below instead:
+    # setx HOME %USERPROFILE% (or setx HOME d:\cygwin\home\myname)
+    # C:\Users\emwdea\.vim>mklink /d %HOME%\.vim %HOME%\.dotfiles\.vim\
+    # C:\Users\emwdea\.vim>mklink /h %HOME%\_vimrc %HOME%\.dotfiles\.vim\vimrc
 fi
 git config --global core.excludesfile .gitignore_global
