@@ -1,5 +1,5 @@
 "  begun building my own .vimrc from this minimalistic one in Jan 2014 /David Engdal
-" 
+"
 " minimal vimrc for new vim users to start with.
 "
 " Referenced here:
@@ -18,6 +18,44 @@
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
+
+"I added the lines below to make the thing work in bloody win 7 (Dec 2014):
+" Stolen from http://stackoverflow.com/users/1006963/darcyparker
+"------------------------------------------------------------------------------
+
+"g:my_vim_dir is used elsewhere in my vim configurations
+let g:my_vim_dir=expand("$HOME/.vim")
+
+"$HOME/.vim and $HOME/.vim/after are in the &rtp on unix
+"But on windows, they need to be added.
+if has("win16") || has("win32") || has("win64")
+  "add g:my_vim_dir to the front of the runtimepath
+   execute "set rtp^=".g:my_vim_dir
+  "add g:my_vim_dir\after to the end of the runtimepath
+  execute "set rtp+=".g:my_vim_dir."\\after"
+  "Note, pathogen#infect() looks for the 'bundle' folder in each path
+  "of the &rtp, where the last dir in the '&rtp path' is not 'after'. The
+  "<path>\bundle\*\after folders will be added if and only if
+  "the corresponding <path>\after folder is in the &rtp before
+  "pathogen#infect() is called.  So it is very important to add the above
+  "'after' folder.
+  "(This applies to vim plugins such as snipmate, tabularize, etc.. that
+  " are loaded by pathogen (and perhaps vundle too.))
+
+  " Not necessary, but I like to cleanup &rtp to use \ instead of /
+  " when on windows machines
+  let &rtp=substitute(&rtp,"[/]","\\","g")
+
+  "On windows, if called from cygwin or msys, the shell needs to be changed
+  "to cmd.exe to work with certain plugins that expect cmd.exe on windows versions
+  "of vim.
+  if &shell=~#'bash$'
+    set shell=$COMSPEC " sets shell to correct path for cmd.exe
+  endif
+endif
+
+"Then I load pathogen... (Or if you prefer, you could load vundle bundles here if you wish )
+"------------------------------------------------------------------------------
 
 
 " setup Pathogen to manage plugins
@@ -55,7 +93,7 @@ set softtabstop=4
 " Color schemes, e.g. slate, dessert, or evening, elflord
 "set t_Co=256
 set background=dark
-colorscheme default 
+colorscheme default
 "hi normal   ctermfg=black  ctermbg=white
 highlight Normal ctermfg=grey ctermbg=black
 

@@ -19,8 +19,8 @@ move_and_link .dotfiles/dotgit/.gitignore_global .gitignore_global
 move_and_link .dotfiles/dotbash/.bash_aliases .bash_aliases
 echo '. .dotfiles/dotbash/.bashrc.user' >> .bashrc
 if [ "$(uname)" == "Darwin" ]; then
-    # Do something under Mac OS X platform        
-    echo 'Installing for Mac OS X, Darwin' 
+    # Do something under Mac OS X platform
+    echo 'Installing for Mac OS X, Darwin'
     echo '# to load normal .bashrc in osx as a new osx terminal uses the .bash_profile instead (login shell)' >> .bash_profile;
     echo 'if [ -f ~/.bashrc ]; then . ~/.bashrc; fi' >> .bash_profile;
     echo '# load aliases' >> .bash_profile;
@@ -30,6 +30,6 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     echo 'Installing for Linux'
 elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
     # Do something under Windows NT platform
-    echo 'Installing for MINGW32_NT' 
+    echo 'Installing for MINGW32_NT'
 fi
 git config --global core.excludesfile .gitignore_global
