@@ -14,11 +14,11 @@
 # Flake and other generated files #
 ###################################
 bin/
-inc/
+# inc/
 lib/
 gen/
 *.linux
-*.cfg
+# *.cfg
 *.adl
 *.log
 *.lat

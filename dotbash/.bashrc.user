@@ -20,13 +20,13 @@ export BUILD_HOME=~/git
 
 
 # Epiphany related stuff:
-if [ -f /opt/adapteva/esdk ]; then 
+# if [ -f /opt/adapteva/esdk ]; then 
     export EPIPHANY_HOME=/opt/adapteva/esdk;
     export EPIPHANY_PLATFORM=parallella-1
     export ELIB_HOME=$EPIPHANY_HOME/tools/e-gnu/epiphany-elf/sys-include
     export EHAL_HOME=$EPIPHANY_HOME/tools/host/include
     . $EPIPHANY_HOME/setup.sh;
-fi
+# fi
 
 # setting up cscope
 CSCOPE_DB=/home/emwdea/cscope/cscope.out; export CSCOPE_DB
