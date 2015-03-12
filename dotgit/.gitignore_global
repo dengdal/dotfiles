@@ -83,3 +83,7 @@ Thumbs.db
 # eclipse meta data #
 #####################
 .metadata/
+
+#####################
+# Adapteva Epiphany #
+*.srec
