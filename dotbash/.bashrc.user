@@ -7,6 +7,8 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     # Do something under Linux platform
     export http_proxy=http://www-proxy.ericsson.se:8080
     export https_proxy=https://www-proxy.ericsson.se:8080
+    # Path for clang lib:
+    export PATH=/usr/lib/x86_64-linux-gnu:$PATH
 elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
     # Do something under Windows NT platform
     :
