@@ -152,3 +152,17 @@ inoremap <F2> <C-R>=expand('%:p:h')<CR>
 
 " neocomplete
 let g:neocomplete#enable_at_startup = 1
+
+
+" Removes trailing spaces
+function! TrimWhiteSpace()
+     %s/\s\+$//e
+endfunction
+
+nnoremap <silent> <Leader>rts :call TrimWhiteSpace()<CR>
+
+autocmd FileWritePre    * :call TrimWhiteSpace()
+autocmd FileAppendPre   * :call TrimWhiteSpace()
+autocmd FilterWritePre  * :call TrimWhiteSpace()
+autocmd BufWritePre     * :call TrimWhiteSpace()
+
