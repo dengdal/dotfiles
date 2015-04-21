@@ -76,7 +76,7 @@ syntax on
 " Enable file type detection and do language-dependent indenting.
 filetype plugin indent on
 
-" ESC is too far away - and Steve Losh and Thanassis Tsiodras is right, this is better than jj
+" ESC is too far away 
 inoremap jk <esc>
 
 " tags and autochdir for effichient tags usage
@@ -93,7 +93,7 @@ set softtabstop=4
 " Color schemes, e.g. slate, dessert, or evening, elflord
 "set t_Co=256
 set background=dark
-colorscheme default
+colorscheme dessert
 "hi normal   ctermfg=black  ctermbg=white
 highlight Normal ctermfg=grey ctermbg=black
 
