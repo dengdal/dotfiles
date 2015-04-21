@@ -18,6 +18,7 @@ move_and_link ~/.dotfiles/.vim .vim
 move_and_link ~/.dotfiles/dotgit/.gitignore_global ~/.gitignore_global
 move_and_link ~/.dotfiles/dotbash/.bash_aliases ~/.bash_aliases
 echo '. ~/.dotfiles/dotbash/.bashrc.user' >> ~/.bashrc
+
 if [ "$(uname)" == "Darwin" ]; then
     # Do something under Mac OS X platform
     echo 'Installing for Mac OS X, Darwin'

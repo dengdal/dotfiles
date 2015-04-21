@@ -1,13 +1,14 @@
 # Some personal bashrc things
 
 if [ "$(uname)" == "Darwin" ]; then
-    # Do something under Mac OS X platform        
+    # Do something under Mac OS X platform
     :
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     # Do something under Linux platform
     export http_proxy=http://www-proxy.ericsson.se:8080
     export https_proxy=https://www-proxy.ericsson.se:8080
-    :
+    # Path for clang lib:
+    export PATH=/usr/lib/x86_64-linux-gnu:$PATH
 elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
     # Do something under Windows NT platform
     :
@@ -21,7 +22,7 @@ export BUILD_HOME=~/git
 
 
 # Epiphany related stuff:
-if [ -e /opt/adapteva/esdk ]; then 
+if [ -e /opt/adapteva/esdk ]; then
     export EPIPHANY_HOME=/opt/adapteva/esdk;
     export EPIPHANY_PLATFORM=parallella-1
     export ELIB_HOME=$EPIPHANY_HOME/tools/e-gnu/epiphany-elf/sys-include
