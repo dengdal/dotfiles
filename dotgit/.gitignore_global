@@ -88,3 +88,6 @@ Thumbs.db
 #####################
 # Adapteva Epiphany #
 *.srec
+######################
+# Xilinx and chessde #
+*.prxui
