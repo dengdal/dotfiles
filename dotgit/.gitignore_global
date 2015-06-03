@@ -14,6 +14,7 @@
 # Flake and other generated files #
 ###################################
 */work
+work/
 bin/
 # inc/
 lib/

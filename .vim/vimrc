@@ -76,7 +76,7 @@ syntax on
 " Enable file type detection and do language-dependent indenting.
 filetype plugin indent on
 
-" ESC is too far away 
+" ESC is too far away
 inoremap jk <esc>
 
 " tags and autochdir for effichient tags usage
@@ -172,3 +172,13 @@ autocmd FileWritePre    * :call TrimWhiteSpace()
 autocmd FileAppendPre   * :call TrimWhiteSpace()
 autocmd FilterWritePre  * :call TrimWhiteSpace()
 autocmd BufWritePre     * :call TrimWhiteSpace()
+
+
+" file header
+autocmd bufnewfile *.c so ~/.dotfiles/.vim/c_header.txt
+autocmd bufnewfile *.c exe "1," . 10 . "g/Copyright (c) .*/s//Copyright (c), Ericsson AB, " .strftime("%Y")
+autocmd bufnewfile *.c exe "1," . 10 . "g/File Name :.*/s//File Name : " .expand("%")
+autocmd bufnewfile *.c exe "1," . 10 . "g/Creation Date :.*/s//Creation Date : " .strftime("%d-%m-%Y")
+autocmd Bufwritepre,filewritepre *.c execute "normal ma"
+autocmd Bufwritepre,filewritepre *.c exe "1," . 10 . "g/Last Modified :.*/s/Last Modified :.*/Last Modified : " .strftime("%c")
+autocmd bufwritepost,filewritepost *.c execute "normal `a"
