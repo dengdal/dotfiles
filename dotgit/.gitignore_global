@@ -95,5 +95,7 @@ Thumbs.db
 ###################################
 # Python, Cython and pyinstaller  #
 *.pyc
-./build
-./dist
+*.spec
+build/
+dist/
+
