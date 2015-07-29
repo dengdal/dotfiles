@@ -1,0 +1,24 @@
+:insert
+#!/usr/bin/python
+
+"""
+filename : Description of what filename does.
+"""
+
+__author__ = "David Engdal"
+__copyright__= "Copyright (c), Ericsson, 2015"
+
+# Creation Date :
+# ******************************************************************************
+
+# ********************************* Imports ************************************
+# ************************* Set up global variables ****************************
+# ***************************** Various functions ******************************
+# ********************************* main ***************************************
+def main():
+    pass
+# ********************* Call if file is run as script **************************
+if __name__ == '__main__':
+        main()
+
+.

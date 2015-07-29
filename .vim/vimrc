@@ -182,3 +182,9 @@ autocmd bufnewfile *.c exe "1," . 10 . "g/Creation Date :.*/s//Creation Date : "
 autocmd Bufwritepre,filewritepre *.c execute "normal ma"
 autocmd Bufwritepre,filewritepre *.c exe "1," . 10 . "g/Last Modified :.*/s/Last Modified :.*/Last Modified : " .strftime("%c")
 autocmd bufwritepost,filewritepost *.c execute "normal `a"
+
+autocmd bufnewfile *.py so ~/.dotfiles/.vim/python_header.txt
+autocmd bufnewfile *.py exe "1," . 10 . "g/filename.*/s//" .expand("%") ": Description of what the program does "
+autocmd bufnewfile *.py exe "1," . 10 . "g/Creation Date :.*/s//Creation Date : " .strftime("%d-%m-%Y")
+autocmd Bufwritepre,filewritepre *.py execute "normal ma"
+autocmd bufwritepost,filewritepost *.py execute "normal `a"

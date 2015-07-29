@@ -92,3 +92,8 @@ Thumbs.db
 ######################
 # Xilinx and chessde #
 *.prxui
+###################################
+# Python, Cython and pyinstaller  #
+*.pyc
+./build
+./dist
