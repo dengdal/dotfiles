@@ -93,7 +93,7 @@ set softtabstop=4
 " Color schemes, e.g. slate, dessert, or evening, elflord
 "set t_Co=256
 set background=dark
-colorscheme dessert
+colorscheme elflord
 "hi normal   ctermfg=black  ctermbg=white
 highlight Normal ctermfg=grey ctermbg=black
 
@@ -156,6 +156,7 @@ let g:neocomplete#sources#syntax#min_keyword_length = 3
 " for Ubuntu:
 "let g:clang_library_path = '/usr/lib'
 "let g:clang_library_path = '/usr/lib/x86_64-linux-gnu'
+let g:clang_library_path = '/usr/lib/arm-linux-gnueabihf'
 let g:clang_use_library = 1
 " Avoid freezing on offending code
 let g:clang_user_options='|| exit 0'
