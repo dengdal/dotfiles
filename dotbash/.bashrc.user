@@ -41,3 +41,6 @@ CSCOPE_DB=/home/emwdea/cscope/cscope.out; export CSCOPE_DB
 
 # in order to get phoronix-test-suite working
 export NO_OPENSSL=1
+
+# some .bashrc files do not source the .bash_aliases
+. ~/.bash_aliases
