@@ -1,3 +1,4 @@
+#! /bin/bash
 #################### Davids's aliases ####################
 alias m=more
 alias ..='cd ..'

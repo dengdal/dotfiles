@@ -43,4 +43,4 @@ CSCOPE_DB=/home/emwdea/cscope/cscope.out; export CSCOPE_DB
 export NO_OPENSSL=1
 
 # some .bashrc files do not source the .bash_aliases
-. ~/.bash_aliases
+. ~/.csh_aliases
